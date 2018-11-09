@@ -1,3 +1,3 @@
-class news_api < ApplicationRecord
+class NewsApi < ApplicationRecord
 
 end
