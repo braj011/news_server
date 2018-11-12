@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :news_apis, only: [:create]
-  post '/news_apis', to: 'news_apis#query'
+  # post '/news_apis', to: 'news_apis#query'
+
+  post '/news_apis', to: 'news_apis#query_headlines'
+  
 end
