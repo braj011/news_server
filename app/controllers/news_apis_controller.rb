@@ -15,13 +15,12 @@ class NewsApisController < ApplicationController
       #   @request_hash = JSON.parse(request)
 
       # end 
-
       def query_headlines
         base_headlines_url = "https://newsapi.org/v2/top-headlines?"
         country = params[:country] # 2 letter country code
         category = 
           if params[:category] == "All"
-            null 
+            '' 
           else 
             "&category=#{params[:category]}"
           end 
@@ -31,7 +30,7 @@ class NewsApisController < ApplicationController
 
     # render json: query
     render json: query_headlines
-
       
    end
+
 end 

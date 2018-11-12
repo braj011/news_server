@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   # post '/news_apis', to: 'news_apis#query'
 
   post '/news_apis', to: 'news_apis#query_headlines'
+
+  get 'news_apis', to: 'news_apis#default_news'
   
 end
