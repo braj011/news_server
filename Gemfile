@@ -53,3 +53,5 @@ gem 'news-api'
 gem 'dotenv-rails'
 
 gem 'httparty', '~> 0.13.7'
+
+gem 'jwt'

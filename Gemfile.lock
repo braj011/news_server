@@ -72,6 +72,7 @@ GEM
       concurrent-ruby (~> 1.0)
     json (1.8.3)
     jsonapi-renderer (0.2.0)
+    jwt (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -159,6 +160,7 @@ DEPENDENCIES
   byebug
   dotenv-rails
   httparty (~> 0.13.7)
+  jwt
   listen (>= 3.0.5, < 3.2)
   news-api
   puma (~> 3.11)

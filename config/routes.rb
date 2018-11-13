@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :users
+
+  post 'login', to: 'users#login'
+
   resources :news_apis, only: [:create]
   resources :categories_users
   resources :news_apis_profile, only: [:create]
