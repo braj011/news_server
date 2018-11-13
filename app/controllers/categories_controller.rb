@@ -9,4 +9,13 @@ class CategoriesController < ApplicationController
     render json:category
   end
 
+  def new
+    @category = Category.new
+  end
+
+  def create
+    created = Category.create(name: params[:name])
+    render json: created
+  end
+
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :users
   resources :news_apis, only: [:create]
-
+  resources :categories_users
   resources :news_apis_profile, only: [:create]
   post '/news_apis_profile/', to: 'news_apis_profile#query'
 
