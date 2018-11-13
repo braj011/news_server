@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    created = Category.create(name: params[:name])
+    created = Category.find_or_create_by(name: params[:name].capitalize)
     render json: created
   end
 
