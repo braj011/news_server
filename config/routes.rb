@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
 
   post 'login', to: 'users#login'
+  post 'signup', to: 'users#signup'
   get 'validate', to: 'users#validate'
 
   resources :news_apis, only: [:create]
