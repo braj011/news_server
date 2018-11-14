@@ -19,10 +19,7 @@ class CategoriesUsersController < ApplicationController
      end
     end
 
-    def destroy
-        listing = CategoryUser.find {|i| i.category_id == params[:category]}
-        listing.destroy
-    end
+    
   
   end
   
