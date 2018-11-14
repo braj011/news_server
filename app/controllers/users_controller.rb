@@ -22,6 +22,17 @@ class UsersController < ApplicationController
         end
     end
 
+    def signup
+        user = User.new(username: params[:username], password: params[:password])
+        if user.valid?
+            user.save
+            CategoryUser.create(category_id: 1, user_id: user.id)
+            render json: {username: user.username, id: user.id, token: issue_token({id: user.id})}
+        else
+            render json: {error: 'Incorrect details'}, status: 400
+        end
+    end
+
     def validate
         user = get_current_user
         if user
